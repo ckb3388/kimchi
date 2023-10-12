@@ -2,9 +2,6 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import textStory
 
-def page_not_found(request, exception):
-    return render(request, '404.html', {})
-
 def index(request):
     if not request.session.get('visited', False):
         request.session['visited'] = True
