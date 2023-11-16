@@ -22,7 +22,7 @@ def textplay(request, reset=False):
     return render(request, 'kimchi/textplay.html', context)
 
 def reset(request, reset=False):
-    return render(requset, 'kimchi/index.html')
+    return render(request, 'kimchi/index.html')
         
 def increase_score(request, score_increment):
     score = request.session.get('score', 0)
